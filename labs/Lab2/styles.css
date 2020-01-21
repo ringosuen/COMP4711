@@ -1,6 +1,6 @@
-p {
-    background-color: ;
-}
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
 
 #artist-text {
     padding: 10pt 10pt 0pt 20pt;
@@ -15,6 +15,8 @@ p {
     border-width: thin;
     width: 35em;
     position: relative; 
+        border-color: lightgrey;
+
 }
 
 #search-bar {
@@ -41,6 +43,7 @@ img {
     padding: .65em;
     border-style: solid;
   border-width: .5pt 1pt .5pt 1pt;
+    border-color: lightgrey;
 }
 
 .column:hover {
@@ -50,10 +53,16 @@ img {
 .name {
     font-size: 15pt;
     font-weight: 550;
-    margin: 0pt 0pt 0pt 60pt;
+    margin: 0pt 0pt 5pt 60pt;
     position: relative;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+
 }
 
 .school {
     font-size: 12pt;
+    margin: 0pt 0pt 0pt 60pt;
+    font-family: 'Catamaran', sans-serif;
+
+
 }
