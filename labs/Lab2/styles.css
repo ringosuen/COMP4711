@@ -1,0 +1,59 @@
+p {
+    background-color: ;
+}
+
+#artist-text {
+    padding: 10pt 10pt 0pt 20pt;
+}
+#search-box {
+/*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+*/
+    border-style: solid;
+    border-width: thin;
+    width: 35em;
+    position: relative; 
+}
+
+#search-bar {
+    padding: 10pt 20pt 20pt 20pt; 
+}
+
+#search-bar input {
+      height: 20pt;
+     width: 350pt;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    float: left;
+}
+
+.column {
+    width: 25em;
+    padding: .65em;
+    border-style: solid;
+  border-width: .5pt 1pt .5pt 1pt;
+}
+
+.column:hover {
+   background-color: lightgrey;
+}
+
+.name {
+    font-size: 15pt;
+    font-weight: 550;
+    margin: 0pt 0pt 0pt 60pt;
+    position: relative;
+}
+
+.school {
+    font-size: 12pt;
+}
