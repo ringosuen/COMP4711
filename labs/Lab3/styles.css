@@ -2,76 +2,79 @@
 
 @import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
 
-#add-button {
-    display: inline-block;
+body {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
-#artist-text {
-    padding: 10pt 10pt 0pt 20pt;
+#artist-text{
+    font-size: 40pt;
+    
 }
-
-#search-box {
-    /*
+#search-box{
     display: flex;
+	justify-content: center;
+	align-items: center;
     flex-direction: column;
-    align-items: center;
-*/
-    border-style: solid;
-    border-width: thin;
-    width: 32em;
-    position: relative;
-    border-color: lightgrey;
-
+    border: 1px solid;
+    width: 50%;
+    margin-left: 25%;
+    height: 15em;
 }
 
-#search-bar {
-    padding: 10pt 20pt 20pt 20pt;
-    display: inline-block;
-
-
+#add-button button{
+    margin: 12pt;
+    background-color: orangered;
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 10pt
+    
 }
-
 #search-bar input {
     height: 20pt;
     width: 250pt;
 }
 
-form {
+#entryForm{
+display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+        display: none;
+
+}
+
+
+.artistInfoFields {
+    text-align: center;
+    margin: 1pt;
+}
+
+.artistInfoFields input{
+    height: 20pt;
+    width: 250pt;
+     font-size: 12pt;
     text-align: center;
 }
 
-#entry-form {
-    border-style: solid;
-    border-width: .5pt 1pt .5pt 1pt;
-    border-color: lightgrey;
-    width: 25em;
-    padding: .65em;
-/*    display: none;*/
-
-}
-
-#entry-form input {
-    width: 250pt;
-    padding: 5pt;
-
-}
-
-.hide { display: none; }
-
-
-.flexbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#artist-list{
+.artistInfoFields button{
+     margin: 12pt;
+    background-color: orangered;
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 10pt
     
 }
-img {
-    float: left;
+
+#artist_list{  
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
 }
 
-.column {
+.outerDiv{
     width: 25em;
     padding: .65em;
     border-style: solid;
@@ -80,35 +83,33 @@ img {
     height: 50pt;
 }
 
-.column:hover {
+
+.outerDiv:hover {
     background-color: lightgrey;
+    cursor: pointer;
+}
+.textDiv {
+    padding: 10px;
+    display: inline-block;
 }
 
-.name {
-    font-size: 15pt;
-    font-weight: 550;
-    margin: 0pt 0pt 5pt 60pt;
-    position: relative;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-
+.imgDiv {
+    float: left;
 }
 
-.school {
-    font-size: 12pt;
-    margin: 0pt 0pt 0pt 60pt;
-    font-family: 'Catamaran', sans-serif;
+/*
+.deleteArtist {
+    margin: auto;
 }
+*/
 
-.profileContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 1em;
-	border-top: 1px solid #a6a6a6;
-	border-bottom: 1px solid #a6a6a6;
-}
+.deleteBtn {
+    width: 80px;
+    height: 30px;
+    background-color: orangered;
+    color: bisque;
+    float: right;
+    display: absolute;
+    margin-top: -48pt;
 
-.profileTextContainer {
-	width: 100%;
-	margin-left: 1rem;
 }

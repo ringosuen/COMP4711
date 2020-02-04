@@ -1,99 +1,73 @@
-//alert( 'Hello, world!' );
 
-//function display() {
-//    
-//  var e = document.getElementById("entry-form");
-//       if(e.style.display == 'block')
-//          e.style.display = 'none';
-//       else
-//          e.style.display = 'block';
-//}
-
-function toggle(){
-  var entry = document.getElementById("entry-form");
- entry.classList.toggle('hide'); 
+function toggleForm() {
+    let artistForm = document.getElementById("entryForm");
+    if (artistForm.style.display === "block") {
+        artistForm.style.display = "none";
+    } else {
+        artistForm.style.display = "block";
+    }
 }
 
-//function add() {
-//  var node = document.createElement("LI");
-//  var textnode = document.createTextNode("Water");
-//  node.appendChild(textnode);
-//  document.getElementById("myList").appendChild(node);
-//}
-
-
-function createInput() {
-	const input_name = document.createElement('input')
-	input_name.className = 'input_name'
-	input_name.type = 'text'
-	input_name.maxLength = 40
-	input_name.placeholder = 'Artist Name'
-
-	const input_desc = document.createElement('input')
-	input_desc.className = 'input_desc'
-	input_desc.type = 'text'
-	input_desc.maxLength = 40
-	input_desc.placeholder = 'About artist'
-
-	const input_imgURL = document.createElement('input')
-	input_imgURL.className = 'input_imgURL'
-	input_imgURL.type = 'text'
-	input_imgURL.placeholder = 'Image url'
-
-	document.querySelector(".entryform").appendChild(input_name)
-	document.querySelector('.entryform').appendChild(input_desc)
-	document.querySelector('.entryform').appendChild(input_imgURL)
-
-	const button_add = document.createElement('button')
-	button_add.className = 'button_add'
-	button_add.textContent = 'Add'
-	button_add.onclick = addInputs
-	document.querySelector('.inputContainer').appendChild(button_add)
-}
-
-function addInputs() {
-	const arist_name = document.querySelector('.name-entry').value
-	const arist_desc = document.querySelector('.about-entry').value
-	const img_url = document.querySelector('.image-entry').value
-
-	if (arist_name !== '' && arist_desc !== '' && img_url !== '') {
-		addArtist(arist_name, arist_desc, img_url)
-	}
-
-}
-
-function addArtist(name, description, picURL) {
+function addEntry() {
+    toggleForm();
     
-	const div_profileContainer = document.createElement('div')
-	div_profileContainer.className = 'profileContainer'
+//append to this big DIV in HTML file 
+    let artist_list = document.getElementById("artist_list");
 
-	const img = document.createElement('img')
-	img.src = picURL
-	img.alt = 'No Img'
-	div_profileContainer.appendChild(img)
-//
-//	const div_profileTextContainer = document.createElement('div')
-//	div_profileTextContainer.className = 'profileTextContainer'
-//	div_profileContainer.appendChild(div_profileTextContainer)
-//
-//	const h3_name = document.createElement('h3')
-//	h3_name.textContent = artist_name.value
-//	div_profileTextContainer.appendChild(h3_name)
-//
-//	const p_description = document.createElement('p')
-//	p_description.textContent = description
-//	div_profileTextContainer.appendChild(p_description)
-//
-	const div_buttonContainer = document.createElement('div')
-	div_buttonContainer.className = 'buttonContainer'
-	div_profileContainer.appendChild(div_buttonContainer)
+//grab data from input and set to var     
+    let artist_name = document.getElementById('name_entry').value;
+    let artist_info = document.getElementById('about_entry').value;
+    let artist_imgURL = document.getElementById('img_entry').value;
+    
+//create outer and inner Div, inner Div to attach photo, name, info divs 
+    let outerDiv = document.createElement("div");
+    outerDiv.className = "outerDiv";
 
-	const btn_delete = document.createElement('button')
-	btn_delete.textContent = 'Delete'
-	btn_delete.addEventListener('click', () => {
-		btn_delete.parentNode.parentNode.parentNode.removeChild(btn_delete.parentNode.parentNode)
-	})
-	div_buttonContainer.appendChild(btn_delete)
+    let innerDiv = document.createElement("div");
+    innerDiv.className = "innerDiv";
+    outerDiv.appendChild(innerDiv);
 
-	document.querySelector('.flexbox').appendChild(div_profileContainer)
+//create Div for Photo and Name/Info
+    let imgDiv = document.createElement("div");
+    imgDiv.className = "imgDiv";
+    innerDiv.appendChild(imgDiv);
+    
+    let textDiv = document.createElement("div");
+    textDiv.className = "textDiv";
+    innerDiv.appendChild(textDiv);
+    
+    let nameDiv = document.createElement("div");
+    nameDiv.className = "nameDiv";
+    textDiv.appendChild(nameDiv);
+    
+    let infoDiv = document.createElement("div");
+    infoDiv.className = "infoDiv";
+    textDiv.appendChild(infoDiv);
+
+    //set image, name, and info
+    let imgElement = document.createElement("img");
+    imgElement.src = artist_imgURL;
+    imgDiv.appendChild(imgElement);
+
+    let nameElement = document.createElement("b");
+    nameElement.innerText = artist_name;
+    nameDiv.appendChild(nameElement);
+
+    let infoElement = document.createElement("p");
+    infoElement.innerText = artist_info;
+    infoDiv.appendChild(infoElement);
+
+//DELETE BUTTON
+    let deleteDiv = document.createElement("div");
+    deleteDiv.className = "deleteArist";
+    let deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    deleteBtn.className = "deleteBtn";
+    deleteBtn.onclick = function() {
+        deleteBtn.parentNode.parentNode.parentNode.parentNode.removeChild(outerDiv);
+    };
+    deleteDiv.appendChild(deleteBtn);
+    innerDiv.appendChild(deleteDiv);
+
+    artist_list.appendChild(outerDiv);
 }

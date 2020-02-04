@@ -1,81 +1,48 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <script type="text/javascript" src="artist.js" defer>
-    </script>
+    <title>Ringo's Artist Web App</title>
+    <link href="styles.css" rel="stylesheet"/>
 
-    <title>Ringo Lab 2</title>
-    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
-
-
-    <div class="flexbox">
-        <div id="search-box">
-            <h1 id="artist-text">Artist Directory</h1>
-            <div id="search-bar">
-                <input type="text" placeholder="Search..">
-            </div>
-
-            <div id="add-button">
-                <button onclick="toggle()" type="button">Add Artist</button>
-            </div>
+    <!--TOP SEARCH BOX-->
+    <div id="search-box">
+        <h1 id="artist-text">Artist Directory</h1>
+        <div id="search-bar">
+            <input type="text" placeholder="Search..">
         </div>
-        
-    <!--ENTRY BOX -->   
-                    <div class="inputContainer">
-    <div class="entryform">
-      
+        <div id="add-button">
+            <button onclick="toggleForm()" type="button">Add Artist</button>
+        </div>
     </div>
-  </div>
-        <form id="entry-form" class="hide">
-            <div class="name-entry"> <input type="text" placeholder="Arist Name">
-            </div>
-            <div class="about-entry"> <input type="text" placeholder="About Artist">
-            </div>
-            <div class="image-entry"> <input type="text" placeholder="Image URL">
-            </div>
-            
-            <div id="add-button">
-                <button onclick="addInputs()" type="button">Add</button>
-            </div>
-        </form>
-        
 
-        <!--ADD NEW ARTIST HERE --> 
-        <div id="artist-list">
-<!--
-        <div class="column"> <img src="https://randomuser.me/api/portraits/med/women/1.jpg" alt="Flowers in Chania">
-            <p class="name">Barot Bellingham</p>
-            <p class="school"> Royal Academy of Painting and Sculpture</p>
+    <!-- TOGGLE THESE ENTRY FIELDS-->
+    <div id="entryForm">
+        <div class="artistInfoFields">
+            <input id="name_entry" placeholder="Artist Name" maxlength="40" />
         </div>
-        <div class="column">
-            <img src="https://randomuser.me/api/portraits/med/men/88.jpg" alt="Flowers in Chania">
-            <p class="name">Jonathan G. Ferrar II</p>
-            <p class="school"> Artist to Watch in 2012</p>
+        <div class="artistInfoFields">
+            <input id="about_entry" placeholder="Artist Description" maxlength="40" />
+        </div>
+        <div class="artistInfoFields">
+            <input id="img_entry" placeholder="Image URL" />
+        </div>
+        <div class="artistInfoFields">
+            <button id="addArtist" onclick="addEntry()">Add</button>
+        </div>
 
-        </div>
-        <div class="column">
-            <img src="https://randomuser.me/api/portraits/med/women/3.jpg" alt="Flowers in Chania">
-            <p class="name">Hillary Hewitt Goldwynn-Post</p>
-            <p class="school"> New York University</p>
-
-        </div>
-        <div class="column">
-            <img src="https://randomuser.me/api/portraits/med/men/1.jpg" alt="Flowers in Chania">
-            <p class="name">Hassum Harrod</p>
-            <p class="school"> Art College in New Dehli</p>
-
-        </div>
-        <div class="column">
-            <img src="https://randomuser.me/api/portraits/med/women/4.jpg" alt="Flowers in Chania">
-            <p class="name">Jennifer Jerome</p>
-            <p class="school"> Royal Academy of Painting and Sculpture</p>
-</div>-->
     </div>
+
+    <!--    APPEND NEW ENTRIES HERE USING JS-->
+    <div id="artist_list">
     </div>
+
+    <script src="artist.js"></script>
+
 </body>
 
 </html>

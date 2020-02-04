@@ -22,35 +22,6 @@ function toggle(){
 //}
 
 
-function createInput() {
-	const input_name = document.createElement('input')
-	input_name.className = 'input_name'
-	input_name.type = 'text'
-	input_name.maxLength = 40
-	input_name.placeholder = 'Artist Name'
-
-	const input_desc = document.createElement('input')
-	input_desc.className = 'input_desc'
-	input_desc.type = 'text'
-	input_desc.maxLength = 40
-	input_desc.placeholder = 'About artist'
-
-	const input_imgURL = document.createElement('input')
-	input_imgURL.className = 'input_imgURL'
-	input_imgURL.type = 'text'
-	input_imgURL.placeholder = 'Image url'
-
-	document.querySelector(".entryform").appendChild(input_name)
-	document.querySelector('.entryform').appendChild(input_desc)
-	document.querySelector('.entryform').appendChild(input_imgURL)
-
-	const button_add = document.createElement('button')
-	button_add.className = 'button_add'
-	button_add.textContent = 'Add'
-	button_add.onclick = addInputs
-	document.querySelector('.inputContainer').appendChild(button_add)
-}
-
 function addInputs() {
 	const arist_name = document.querySelector('.name-entry').value
 	const arist_desc = document.querySelector('.about-entry').value
