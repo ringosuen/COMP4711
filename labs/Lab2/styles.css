@@ -99,16 +99,3 @@ img {
     font-family: 'Catamaran', sans-serif;
 }
 
-.profileContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 1em;
-	border-top: 1px solid #a6a6a6;
-	border-bottom: 1px solid #a6a6a6;
-}
-
-.profileTextContainer {
-	width: 100%;
-	margin-left: 1rem;
-}

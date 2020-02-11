@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
+
+body {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#artist-text{
+    font-size: 40pt;
+    
+}
+#search-box{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    border: 1px solid;
+    width: 50%;
+    margin-left: 25%;
+    height: 15em;
+}
+
+#add-button button{
+    margin: 12pt;
+    background-color: orangered;
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 10pt
+    
+}
+#search-bar input {
+    height: 20pt;
+    width: 250pt;
+}
+
+#entryForm{
+display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+        display: none;
+
+}
+
+
+.artistInfoFields {
+    text-align: center;
+    margin: 1pt;
+}
+
+.artistInfoFields input{
+    height: 20pt;
+    width: 250pt;
+     font-size: 12pt;
+    text-align: center;
+}
+
+.artistInfoFields button{
+     margin: 12pt;
+    background-color: orangered;
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 10pt
+    
+}
+
+#artist_list{  
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+
+.outerDiv{
+    width: 25em;
+    padding: .65em;
+    border-style: solid;
+    border-width: .5pt 1pt .5pt 1pt;
+    border-color: lightgrey;
+    height: 50pt;
+}
+
+
+.outerDiv:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.textDiv {
+    padding: 10px;
+    display: inline-block;
+}
+
+.imgDiv {
+    float: left;
+}
+
+/*
+.deleteArtist {
+    margin: auto;
+}
+*/
+
+.deleteBtn {
+    width: 80px;
+    height: 30px;
+    background-color: orangered;
+    color: bisque;
+    float: right;
+    display: absolute;
+    margin-top: -48pt;
+
+}
+
+.bulletList{
+    list-style-type: none;
+}

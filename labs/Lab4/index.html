@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ringo's Artist Web App</title>
+    <link href="styles.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <!--TOP SEARCH BOX-->
+    <div id="search-box">
+        <h1 id="artist-text">Artist Directory</h1>
+        <div id="search-bar">
+            <input id ="searchbar" type="text" placeholder="Start Typing To Search.." onkeyup="searchArtist()"/>
+        </div>
+        <div id="add-button">
+            <button onclick="toggleForm()" type="button">Add Artist</button>
+        </div>
+    </div>
+
+    <!-- TOGGLE THESE ENTRY FIELDS-->
+    <div id="entryForm">
+        <div class="artistInfoFields">
+            <input id="name_entry" placeholder="Artist Name" maxlength="40" />
+        </div>
+        <div class="artistInfoFields">
+            <input id="about_entry" placeholder="Artist Description" maxlength="40" />
+        </div>
+        <div class="artistInfoFields">
+            <input id="img_entry" placeholder="Image URL" />
+        </div>
+        <div class="artistInfoFields">
+            <button id="addArtist" onclick="addArtist()">Add</button>
+        </div>
+
+    </div>
+
+    <!--    APPEND NEW ENTRIES HERE USING JS-->
+    <div id="artist_list">
+    </div>
+
+    <script src="artist.js"></script>
+
+</body>
+
+</html>
